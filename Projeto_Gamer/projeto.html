@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameLoop | Catálogo de jogos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="index.html">🎮 Game<span>Loop</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a href="sobre.html">Sobre o projeto</a><a class="ativo" href="projeto.html">Catálogo de jogos</a><a href="contato.html">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <section class="pagina-banner"><p class="etiqueta">CENTRAL DE JOGOS</p><h1>Encontre sua próxima <span>aventura.</span></h1><p>Pesquise títulos, filtre por gênero e compare informações em um só lugar.</p></section>
+    <section class="secao">
+      <div class="filtros">
+        <label class="campo-busca">🔎 <span class="sr-only">Pesquisar jogos</span><input id="pesquisa" type="search" placeholder="Digite o nome de um jogo..." aria-label="Pesquisar jogos"></label>
+        <label class="campo-select">Gênero
+          <select id="filtro-genero"><option value="todos">Todos os gêneros</option><option>Ação</option><option>RPG</option><option>Esportes</option><option>Aventura</option></select>
+        </label>
+        <label class="campo-select">Conservação
+          <select id="filtro-estado"><option value="todos">Todos os estados</option><option>Excelente</option><option>Bom</option><option>Regular</option></select>
+        </label>
+      </div>
+      <p id="resultado-contagem" class="resultado-contagem" aria-live="polite">Mostrando todos os jogos.</p>
+      <div class="tabela-wrap">
+        <table id="tabela-jogos">
+          <caption>Catálogo demonstrativo de jogos usados — valores ilustrativos em reais.</caption>
+          <thead><tr><th scope="col">Jogo</th><th scope="col">Console</th><th scope="col">Gênero</th><th scope="col">Conservação</th><th scope="col">Preço</th><th scope="col">Detalhes</th></tr></thead>
+          <tbody>
+            <tr data-nome="the legend of zelda breath of the wild" data-genero="Aventura" data-estado="Bom"><td><strong>The Legend of Zelda: Breath of the Wild</strong></td><td>Nintendo Switch</td><td>Aventura</td><td><span class="estado estado-bom">Bom</span></td><td>R$ 220,00</td><td><button class="detalhe-btn" data-detalhe="Aventura em mundo aberto. Confira se a caixa e o cartucho estão incluídos na negociação.">Ver detalhes</button></td></tr>
+            <tr data-nome="god of war ragnarok" data-genero="Ação" data-estado="Excelente"><td><strong>God of War Ragnarök</strong></td><td>PlayStation 5</td><td>Ação</td><td><span class="estado estado-excelente">Excelente</span></td><td>R$ 190,00</td><td><button class="detalhe-btn" data-detalhe="Aventura de ação. Verifique a mídia, a capa e a compatibilidade com seu console.">Ver detalhes</button></td></tr>
+            <tr data-nome="ea sports fc 24" data-genero="Esportes" data-estado="Bom"><td><strong>EA Sports FC 24</strong></td><td>PlayStation 4</td><td>Esportes</td><td><span class="estado estado-bom">Bom</span></td><td>R$ 85,00</td><td><button class="detalhe-btn" data-detalhe="Jogo de futebol. Confirme se os modos que você deseja jogar ainda estão disponíveis.">Ver detalhes</button></td></tr>
+            <tr data-nome="elden ring" data-genero="RPG" data-estado="Excelente"><td><strong>Elden Ring</strong></td><td>Xbox Series X</td><td>RPG</td><td><span class="estado estado-excelente">Excelente</span></td><td>R$ 175,00</td><td><button class="detalhe-btn" data-detalhe="RPG de fantasia e exploração. Confira a edição e a plataforma antes de comprar.">Ver detalhes</button></td></tr>
+            <tr data-nome="mario kart 8 deluxe" data-genero="Esportes" data-estado="Regular"><td><strong>Mario Kart 8 Deluxe</strong></td><td>Nintendo Switch</td><td>Esportes</td><td><span class="estado estado-regular">Regular</span></td><td>R$ 160,00</td><td><button class="detalhe-btn" data-detalhe="Corridas divertidas para jogar sozinho ou com amigos. Inspecione bem o cartucho e a embalagem.">Ver detalhes</button></td></tr>
+            <tr data-nome="spider-man miles morales" data-genero="Ação" data-estado="Bom"><td><strong>Spider-Man: Miles Morales</strong></td><td>PlayStation 5</td><td>Ação</td><td><span class="estado estado-bom">Bom</span></td><td>R$ 120,00</td><td><button class="detalhe-btn" data-detalhe="Jogo de ação com super-herói. Compare a edição e o conteúdo incluído.">Ver detalhes</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mensagem-vazia" class="mensagem-vazia" hidden>Nenhum jogo encontrado. Tente outro nome ou altere os filtros.</div>
+    </section>
+    <section class="faixa"><div><p class="etiqueta">NÃO ENCONTROU O QUE QUERIA?</p><h2>Conte para a gente qual jogo você procura.</h2><p>Envie uma mensagem e ajude a melhorar nosso catálogo demonstrativo.</p></div><a class="botao botao-claro" href="contato.html">Pedir um jogo →</a></section>
+  </main>
+  <div class="modal" id="modal-detalhes" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden><div class="modal-caixa"><button class="modal-fechar" aria-label="Fechar detalhes">×</button><p class="etiqueta">DETALHES DO JOGO</p><h2 id="modal-titulo">Sobre este jogo</h2><p id="modal-texto"></p><button class="botao" id="modal-ok">Entendi</button></div></div>
+  <footer class="rodape"><a class="logo" href="index.html">🎮 Game<span>Loop</span></a><p>Projeto acadêmico demonstrativo • Feito para a comunidade gamer.</p><p>© 2026 GameLoop</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

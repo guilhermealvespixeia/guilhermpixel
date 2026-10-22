@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+<title id="title">Controle de videogame estilizado</title><desc id="desc">Controle roxo com botões verdes, rosa e direcionais, em estilo moderno.</desc>
+<defs><linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#6753bc"/></linearGradient><linearGradient id="grip" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8e7ae0"/><stop offset="1" stop-color="#4c438b"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<ellipse cx="320" cy="326" rx="210" ry="28" fill="#050816" opacity=".45" filter="url(#shadow)"/>
+<g transform="rotate(-5 320 200)">
+<path d="M163 105 Q130 95 110 128 L55 235 Q36 275 66 295 Q93 313 118 286 L176 236 Q194 222 218 225 L422 225 Q446 222 464 236 L522 286 Q547 313 574 295 Q604 275 585 235 L530 128 Q510 95 477 105 Q400 128 320 128 Q240 128 163 105Z" fill="url(#body)" stroke="#c5b7ff" stroke-width="5"/>
+<path d="M130 154 Q144 128 171 136 L213 153 L201 220 L155 242 L98 264 Q81 272 74 256 L130 154Z" fill="url(#grip)" opacity=".7"/>
+<path d="M510 154 Q496 128 469 136 L427 153 L439 220 L485 242 L542 264 Q559 272 566 256 L510 154Z" fill="url(#grip)" opacity=".7"/>
+<path d="M163 163 H205 V180 H222 V222 H205 V239 H163 V222 H146 V180 H163Z" fill="#161d35"/><path d="M184 172 V230 M155 201 H213" stroke="#a3ffcb" stroke-width="10" stroke-linecap="round"/>
+<circle cx="459" cy="177" r="20" fill="#202744"/><circle cx="459" cy="177" r="10" fill="#a3ffcb"/>
+<circle cx="489" cy="207" r="20" fill="#202744"/><circle cx="489" cy="207" r="10" fill="#ff8eb5"/>
+<circle cx="429" cy="207" r="20" fill="#202744"/><circle cx="429" cy="207" r="10" fill="#a78bfa"/>
+<circle cx="459" cy="237" r="20" fill="#202744"/><circle cx="459" cy="237" r="10" fill="#ffd39a"/>
+<rect x="268" y="164" width="40" height="65" rx="18" fill="#353c5f"/><rect x="332" y="164" width="40" height="65" rx="18" fill="#353c5f"/>
+<rect x="276" y="172" width="24" height="49" rx="12" fill="#191f37"/><rect x="340" y="172" width="24" height="49" rx="12" fill="#191f37"/>
+<rect x="282" y="181" width="12" height="31" rx="6" fill="#a3ffcb"/><rect x="346" y="181" width="12" height="31" rx="6" fill="#ff8eb5"/>
+<path d="M241 137 Q320 153 399 137" fill="none" stroke="#d9d0ff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+</g></svg>
